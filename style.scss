@@ -1,0 +1,672 @@
+$color:grey;
+//$cd-start: rgb(1,28,55,0);
+//$cd-end: rgb(1,28,55,1);
+.container 
+{
+    height:100px;
+    width:300px;
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:$color;
+}
+
+.btn 
+{
+    height:50px;
+    width:200px;
+    background-color:blue;
+    transition:0.2s;
+    border-radius:40px;
+    cursor:pointer;
+    padding-left:30px;
+    padding-top:20px;
+    font-weight:bold;
+    color:white;
+
+    &:hover
+    {
+        transform: scale(1.15);
+    }
+}
+
+//formulaire
+$cd-box:#fff;
+$cd-text:#6300a0;
+$cd-danger:#f80808;
+.container_form
+{
+    background-color:rgb(31, 167, 182);
+    width:300px;
+    height:75px;
+}
+.form
+{
+    margin-top:30px;
+    & label
+    {
+        & input
+        {
+            background-color:$cd-box;
+            height:30px;
+            width:200px;
+            border-radius:5em;
+            font-size:1em;
+            font-weight:bold;
+            margin-left:30px;
+            background-color:white;
+            transition: background-color 0.2s;
+            &:focus
+            {
+                border:3px solid $cd-text;
+                color:black;
+                font-weight:bold;
+                font-size:1em;
+            }
+            &:not(:focus):invalid
+            {
+                border:3px solid $cd-danger;
+                background-color: $cd-danger;
+                color:white;
+                font-weight:bold;
+            }
+        }
+    }
+}
+
+//boule qui grossit
+
+.container_two
+{
+    height:200px;
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    background-color:aquamarine;
+        & .ball-btn
+        {
+            width:150px;
+            height:25px;
+            background-color:black;
+            color:white;
+            border-radius:1em;
+            text-align:center;
+            cursor:pointer;
+                &:hover + .ball
+                {
+                    transform:scale(3);
+                    background-color:grey;
+                }
+        }
+        & .ball 
+        {
+            display:flex;
+            justify-content:center;
+            height:50px;
+            width:50px;
+            border-radius:100px;
+            background-color:black;
+            color:white;
+            transition: transform 1s, background-color 0.2s 0.8s;
+        }
+}
+// bouton survoler
+
+
+.container_survoler
+{
+    border:2px solid rgb(17, 17, 192);
+    height:90px;
+    width:300px;
+    background-color:rgb(35, 241, 162);
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+        & .survoler
+        {
+            border:2px solid pink;
+            height:45px;
+            width:180px;
+            border-radius:40px;
+            text-align:center;
+            background-color: rgba(43, 241, 36,0);
+            transition: transform 1s , background-color 0.1s 0.9s;
+            cursor:pointer;
+                
+                &:hover
+                {
+                    transform:scale(1.2);
+                    background-color:rgba(43,241,36,1);
+                    color:white;
+                   
+                }
+        
+
+        }
+}
+
+//boule qui monte difficilement
+
+.container_three
+{
+    height:400px;
+    width:300px;
+    background-color:aqua;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+
+        & .bouton 
+        {
+            width:70px;
+            height:50px;
+            border-radius:50px 50px 0 0 ;
+            background-color:blue;
+            border:1px solid blue;
+            cursor:pointer;
+
+                &:active + .three
+                {
+                    transform: translateY(-296px);
+                    width:70px;
+                    height:50px;
+                    border-radius: 0 0 50px 50px;
+                    background-color:blue;
+                }
+        }
+        
+        & .three
+        {
+            border:1px solid blue;
+            width:20px;
+            height:20px;
+            border-radius:20px;
+            background-color:pink;
+            transition: transform 2s ease-in-out, background-color 1.7s 0.3s, width 1.7s 0.3s, height 1.7s 0.3s, border-radius 1.7s 0.3s;
+
+        } 
+
+}
+.container_four
+{
+    height:250px;
+    border-top:4px solid blue;
+    width:300px;
+    display:flex;
+    flex-direction:column-reverse;
+    align-items:center;
+    justify-content:space-between;
+    transform:scale(1);
+    background-color:cyan;
+
+   
+    & .button_four {
+        height:50px;
+        width:180px;
+        border-radius:50px;
+        border:1px solid blue;
+    }
+    & .cube{
+        width:20px;
+        height:20px;
+        border:1px solid blue;
+        margin-top:75px;
+        transform:scale(1);
+        transition:transform 1s ease-in-out;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        overflow:hidden;
+        background-color:blue;
+
+        & .text_boop
+        {
+            display:block;
+            transform:translateY(250%);
+            transition:transform 280ms ease-out 50ms;
+            font-size:5px;
+            color:white;
+            font-weight:bold;
+        }
+    }
+
+    & :hover + .cube 
+    {
+        transform: scale(6,4);
+
+        & .text_boop
+        {
+            transform: translateY(0);
+            font-size:5px;
+        }
+    }
+}
+.button_four 
+{
+    background-color:blue;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    cursor:pointer;
+    padding-top:17px;
+}
+
+// bloc qui tourne
+
+.container_five
+{
+    width:350px;
+    height:250px;
+    border:1px solid red;
+    display:flex;
+    flex-direction:column-reverse;
+    justify-content:space-around;
+    align-items:center;
+    background-color:red;
+
+    & .btn_five 
+    {
+        height:30px;
+        width:100px;
+        border:1px solid red;
+        cursor:pointer;
+        background-color:grey;
+        border-radius:15px;
+        text-align:center;
+        padding-top:10px;
+
+        &:hover + .boxes
+        {
+            & .boxes__base
+            {
+                transform:rotate(180deg);
+            }
+        }
+    }
+
+    & .boxes 
+    {
+        height:180px;
+        width:345px;
+        display:flex;
+        align-items:center;
+        justify-content:space-around;
+
+        & .boxes--rotDegrees 
+        {
+            border:1px solid green;
+            height:75px;
+            width:100px;
+            transform: rotate(-90deg);
+            transition:transform 1s ease-in;
+            background-color:green;
+        }
+
+        & .boxes--rotTurns 
+        {
+            border:1px solid green;
+            height:75px;
+            width:100px;
+            transform:rotate(-90deg);
+            transition:transform 1s ease-out;
+            background-color:green;
+        }
+    }
+
+}
+
+.container_six
+{
+    height:200px;
+    width:300px;
+    border:1px solid purple;
+    display:flex;
+    flex-direction:column-reverse;
+    justify-content:space-around;
+    align-items:center;
+    background-color:purple;
+
+
+    & .button_six
+    {
+        border:1px solid black;
+        height:30px;
+        width:100px;
+        border-radius:25px;
+        cursor:pointer;
+        color:white;
+        font-weight:bold;
+        background-color:rgb(54, 190, 145);
+        text-align:center;
+        padding-top:10px;
+
+        &:hover + .blocsix 
+        {
+            & .charge
+            {
+                transform: scaleX(208);
+                background-color:rgb(54,190,145);
+            }
+        }
+    }
+
+    & .blocsix 
+    {
+        border:2px solid black;
+        height:20px;
+        width:250px;
+        margin-top:20px;
+        display:flex;
+        align-items:center;
+        background-color:white;
+
+        & .charge 
+        {
+            background-color:white;
+            width:1px;
+            height:18px;
+            margin-right:40px;
+            transform-origin:left;
+            transform:scaleX(1);
+            transition: transform 3s cubic-bezier(.85,.5,.04,1.03), color 0.2s ;
+            
+        }
+    }
+}
+
+//bouton survoler
+.container_seven
+{
+    border:1px solid purple;
+    width:300px;
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    
+
+    & .btns 
+    {
+        width:200px;
+        height:50px;
+        border-radius:25px;
+        background-color:rgb(26, 24, 22);
+        color:white;
+        font-weight:bold;
+        text-align:center;
+        cursor:pointer;
+        position:relative;
+        z-index:1;
+
+        &:hover 
+        {
+            & .btns__bg
+            {
+                opacity:0;
+            }
+        }
+
+        & .btns__bg 
+        {
+            position:absolute;
+            background-color:rgb(184, 178, 178);
+            position:absolute;
+            z-index:8;
+            top:0;
+            right:0;
+            left:0;
+            bottom:0;
+            transition:opacity 0.2s;
+            border-radius:25px;
+        }
+    }
+}
+
+//@keyframes
+
+.container_eight
+{
+    height:200px;
+    width:300px;
+    border:1px solid purple;
+    display:flex;
+    flex-direction:column-reverse;
+    justify-content:space-around;
+    align-items:center;
+    background-color:purple;
+
+
+    & .button_eight
+    {
+        border:1px solid black;
+        height:30px;
+        width:100px;
+        border-radius:25px;
+        cursor:pointer;
+        color:white;
+        font-weight:bold;
+        background-color:rgb(255, 32, 32);
+        text-align:center;
+        padding-top:10px;
+
+        &:hover + .bloceight 
+        {
+            & .charge
+            {
+                
+                background-color:rgb(255, 32, 32);
+                animation: progress-bar 5s;
+                opacity:0;
+            }
+        }
+    }
+
+    & .bloceight 
+    {
+        border:2px solid black;
+        height:20px;
+        width:250px;
+        margin-top:20px;
+        display:flex;
+        align-items:center;
+        background-color:white;
+
+        & .charge 
+        {
+            background-color:white;
+            width:1px;
+            height:18px;
+            margin-right:40px;
+            transform-origin:left;
+            transform:scaleX(1);
+            transition: transform 3s cubic-bezier(.85,.5,.04,1.03), color 0.2s ;
+            
+        }
+    }
+}
+
+// animation lors du chargement de la page
+
+.container_nine
+{
+    height:200px;
+    width:300px;
+    border:1px solid purple;
+    display:flex;
+    flex-direction:column-reverse;
+    justify-content:space-around;
+    align-items:center;
+    background-color:purple;
+    color:white;
+    font-weight:bold;
+
+
+    & .button_nine
+    {
+        border:1px solid black;
+        height:30px;
+        width:100px;
+        border-radius:25px;
+        cursor:pointer;
+        color:white;
+        font-weight:bold;
+        background-color:rgb(255, 32, 32);
+        text-align:center;
+        padding-top:10px;
+
+        
+    }
+
+    & .blocnine 
+    {
+        border:2px solid black;
+        height:20px;
+        width:250px;
+        margin-top:20px;
+        display:flex;
+        align-items:center;
+        background-color:white;
+
+        & .chargement
+        {
+            background-color:rgb(230, 216, 13);
+            width:1px;
+            height:18px;
+            margin-right:40px;
+            transform-origin:left; 
+            animation: progress-bar 5s 1s both;
+        }
+
+    }
+}
+// deuxieme formulaire
+.container_form2
+{
+    background-color:rgb(237,246,247);
+    width:300px;
+    height:75px;
+}
+.form2
+{
+    margin-top:30px;
+    & label
+    {
+        & input
+        {
+            background-color:$cd-box;
+            height:30px;
+            width:200px;
+            border-radius:5em;
+            font-size:1em;
+            font-weight:bold;
+            margin-left:30px;
+            background-color:blue;
+            &:focus
+            {
+                border:3px solid $cd-text;
+                color:black;
+                font-weight:bold;
+                font-size:1em;
+            }
+            &:not(:focus):invalid
+            {
+                border:3px solid $cd-danger;
+                background-color: $cd-danger;
+                color:white;
+                font-weight:bold;
+                animation:headshake 100ms 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2;
+            }
+        }
+    }
+}
+$shake-intensity:1%;
+// Barre de chargement
+
+$cd-bars:#15DEA5;
+$size:3vh;
+$anim-dur:1000ms;
+$num-bars:5;
+$anim-delay: $anim-dur / $num-bars;
+$cd-bars-inv:rgb(88, 85, 85);
+.container_ten 
+{
+    background-color:blue;
+    width:300px;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+}
+.load 
+{
+    width:$size*10;
+    height: $size*7.5;
+    display:flex;
+    justify-content:space-evenly;
+
+        &_bar
+        {
+            background-color:$cd-bars;
+            height:100%;
+            width:$size;
+            animation: bar $anim-dur backwards infinite alternate ease-in-out;
+
+                @for $i from 1 through $num-bars {
+                    &--#{$i}
+                    {
+                        animation-delay:$anim-delay*$i;
+                    }
+                    &--#{$i}--inv 
+                    {
+                        animation-delay:$anim-delay*$i + random(100)*15ms;
+                        background-color:$cd-bars-inv;
+                        animation-direction:alternate-reverse;
+
+                            &:hover {
+                                animation-play-state: paused;
+                            }
+                    }
+                }
+        }
+}
+
+@keyframes bar {
+    0% {
+        transform:scaleY(0.5);
+    }
+    100% {
+        transform:scaleY(1);
+    }
+}
+@keyframes headshake {
+    25%{
+        transform:translateX($shake-intensity);
+    }
+    75%{
+        transform:translateX($shake-intensity * -1);
+    }
+}
+@keyframes progress-bar {
+    0%{
+        transform:scaleX(0);
+    }
+    17%{
+        transform:scaleX(50);
+    }
+    24%{
+        transform:scaleX(99);
+    }
+    65%,100%{
+        transform:scaleX(144);
+        opacity:1;
+    }
+    100%{
+        transform:scaleX(208);
+    }
+}
